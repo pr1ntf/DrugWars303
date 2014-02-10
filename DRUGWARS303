@@ -1,6 +1,6 @@
 Lbl G
 ClrHome
-Disp " J.M.'S DRUGWAR","   SIMULATION","","  VERSION 2.00","","  JUST SAY NO."
+Disp "  DrugWars303","    Based on","    Drugwars","  VERSION 1.0","","  JUST SAY NO."
 2000→Z
 5000→Y
 0→V
@@ -95,7 +95,7 @@ End
 If D=8
 Then
 ClrHome
-Disp "YOU WERE MUGGED","IN THE SUBWAY!"
+Disp "YOU WERE MUGGED","IN THE LIGHTRAIL!"
 Pause 
 (Z/3)→Z
 (int(Z)→Z
@@ -125,7 +125,7 @@ Then
 ClrHome
 Disp "YOU HALLUCINATE","ON THE WILDEST","TRIP OF YOUR","LIFE,"
 Pause 
-Disp "STUMBLE ON TO","THE SUBWAY","TRACKS AND GET","CREAMED BY A","TRAIN."
+Disp "STUMBLE ON TO","THE LIGHTRAIL","TRACKS AND GET","CREAMED BY A","TRAIN."
 Pause 
 ClrHome
 Disp "JUST SAY NO TO","DRUGS."
@@ -193,7 +193,7 @@ Then
 Disp "         COCAINE"
 (M+F)→M
 End
-Disp "ON A DEAD DUDE","IN THE SUBWAY!!!"
+Disp "ON A DEAD DUDE","ON THE LIGHTRAIL!!!"
 (T-M-N-O-P-Q-R)→K
 Pause 
 Goto A
@@ -372,7 +372,7 @@ Goto 3
 int((Z/F)→E
 Disp "HOW MUCH?","YOU CAN AFFORD:",E,"YOU CAN HOLD:",K
 Input G
-If G>K or G<0 or G>E
+If G&gt;K or G&lt;0 or G&gt;E
 Goto 3
 (Z-(FG))→Z
 If F=C
@@ -409,7 +409,7 @@ If F=L
 R→E
 Disp "HOW MUCH?","YOU HAVE:",E
 Input G
-If G>E or G<0
+If G&gt;E or G&lt;0
 Goto 4
 If F=C
 (M-G)→M
@@ -443,7 +443,7 @@ Lbl B
 1→N
 Lbl S
 ClrHome
-Disp "","","","","     SUBWAY"
+Disp "","","","","  LIGHTRAIL"
 (B+1)→B
 int((Y*1.1)→Y
 int((V*1.06)→V
@@ -464,7 +464,7 @@ Lbl P
 ClrHome
 Disp "YOU'RE DEBT IS:",Y,"YOUR WALLET=",Z,"REPAY HOW MUCH?"
 Input F
-If F>Z or F<0 or F>Y
+If F&gt;Z or F&lt;0 or F&gt;Y
 Goto 6
 (Y-F)→Y
 (Z-F)→Z
@@ -473,14 +473,14 @@ Lbl Q
 ClrHome
 Disp "YOUR DEBT=",Y,"YOUR WALLET=",Z,"BORROW HOW MUCH"
 Input "MORE?",F
-If F>5000
+If F&gt;5000
 Then
 ClrHome
 Disp "YOU THINK HE'S","CRAZY, MAN?!"
 Pause 
 Goto Q
 End
-If F<0
+If F&lt;0
 Goto 6
 (Y+F)→Y
 (Z+F)→Z
@@ -503,7 +503,7 @@ Lbl E
 ClrHome
 Disp "HOW MUCH TO","DEPOSIT?","YOU HAVE:",Z
 Input G
-If G>Z or G<0
+If G&gt;Z or G&lt;0
 Goto E
 (V+G)→V
 (Z-G)→Z
@@ -512,7 +512,7 @@ Lbl F
 ClrHome
 Disp "HOW MUCH TO","WITHDRAW?","ACCOUNT=",V
 Input X
-If X>V or X<0
+If X&gt;V or X&lt;0
 Goto F
 (V-X)→V
 (Z+X)→Z
@@ -521,12 +521,12 @@ Lbl C
 ClrHome
 Disp "   GAME OVER!"
 (V+Z-Y)→V
-If V<0
+If V&lt;0
 Then
 0→V
 Else
 (√(V/31.5)→V
-If V>100
+If V&gt;100
 100→V
 End
 round(V,0)→V
