@@ -193,7 +193,7 @@ Then
 Disp "         COCAINE"
 (M+F)→M
 End
-Disp "ON A DEAD DUDE","ON THE LIGHTRAIL!!!"
+Disp "ON A DEAD DUDE","ON THE","LIGHTRAIL!!!"
 (T-M-N-O-P-Q-R)→K
 Pause 
 Goto A
@@ -428,12 +428,12 @@ If F=L
 Goto A
 Lbl 5
 ClrHome
-Menu("WHERE TO, DUDE?","BRONX",R,"GHETTO",B,"CENTRAL PARK",B,"MANHATTEN",B,"CONEY ISLAND",B,"BROOKLYN",B,"OOPS... STAY!",A)
+Menu("WHERE TO, DUDE?","16TH STREET",R,"5POINTS",B,"BROADWAY",B,"GOLDEN",B,"ACC CAMPUS",B,"TECH CENTER",B,"OOPS... STAY!",A)
 Lbl R
 If N=2
 Then
 ClrHome
-Disp "YOU'RE ALREADY","IN THE BRONX!"
+Disp "YOU'RE ALREADY","AT 16TH STREET!"
 Pause 
 Goto 5
 End
@@ -454,7 +454,7 @@ Lbl 6
 If N=1
 Then
 ClrHome
-Disp "THE LOAN SHARK","ONLY DEALS IN","THE BRONX."
+Disp "THE LOAN SHARK","ONLY DEALS IN","16TH STREET."
 Pause 
 Goto A
 End
@@ -489,7 +489,7 @@ Lbl 7
 If N=1
 Then
 ClrHome
-Disp "THE BANK IS IN","THE BRONX."
+Disp "THE BANK IS IN","16TH STREET."
 Pause 
 Goto A
 End
