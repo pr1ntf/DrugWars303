@@ -1,16 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cells</key>
-	<array>
-		<dict>
-			<key>column</key>
-			<integer>1</integer>
-			<key>row</key>
-			<integer>1</integer>
-			<key>stringValue</key>
-			<string>Lbl G
+Lbl G
 ClrHome
 Disp "  DrugWars303","    Based on","    Drugwars","  VERSION 1.0","","  JUST SAY NO."
 2000→Z
@@ -554,16 +542,3 @@ ClrHome
 Disp "","","REMEMBER:","","WATCH YOUR BACK."
 Pause 
 Disp "","HAVE A NICE DAY!"
-</string>
-		</dict>
-	</array>
-	<key>device name</key>
-	<string>DW303</string>
-	<key>device type</key>
-	<string>TI-84 Plus</string>
-	<key>isProtected</key>
-	<false/>
-	<key>object type</key>
-	<string>Program</string>
-</dict>
-</plist>
