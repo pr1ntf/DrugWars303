@@ -95,7 +95,7 @@ End
 If D=8
 Then
 ClrHome
-Disp "YOU WERE MUGGED","IN THE LIGHTRAIL!"
+Disp "YOU WERE MUGGED","ON THE","LIGHTRAIL!"
 Pause 
 (Z/3)→Z
 (int(Z)→Z
