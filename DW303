@@ -18,9 +18,9 @@ Disp "  DrugWars303","    Based on","    Drugwars","  VERSION 1.0","","  JUST SA
 0→R
 Pause 
 ClrHome
-Disp "","ORIGINAL GAME","FOR IBM BY:","  JOHN E. DELL",""
-Disp "INSTRUCTIONS?"
-Input "(1=YES,2=NO)",X
+Disp "","  ORIGINAL GAME","  FOR IBM BY:","  JOHN E. DELL",""
+Disp "  INSTRUCTIONS?"
+Input "  (1=YES,2=NO)",X
 If X=1
 Then
 ClrHome
@@ -338,7 +338,7 @@ End
 End
 Lbl A
 ClrHome
-Menu("DRUGWAR!","SEE PRICES",1,"BACKPACK",2,"BUY",3,"SELL",4,"JET",5,"SEE LOAN SHARK",6,"VISIT BANK",7)
+Menu("DRUGWAR!","SEE PRICES",1,"BACKPACK",2,"BUY",3,"SELL",4,"LIGHTRAIL",5,"SEE LOAN SHARK",6,"VISIT BANK",7)
 Lbl 1
 ClrHome
 Disp C,H,A,W,S,V,Z
