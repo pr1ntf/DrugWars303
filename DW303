@@ -430,20 +430,20 @@ Lbl 5
 ClrHome
 Menu("WHERE TO, DUDE?","16TH STREET",R,"5POINTS",B,"BROADWAY",B,"GOLDEN",B,"ACC CAMPUS",B,"TECH CENTER",B,"OOPS... STAY!",A)
 Lbl R
-If N=2
+If U=2
 Then
 ClrHome
 Disp "YOU'RE ALREADY","AT 16TH STREET!"
 Pause 
 Goto 5
 End
-2→N
+2→U
 Goto S
 Lbl B
-1→N
+1→U
 Lbl S
 ClrHome
-Disp "","","","","  LIGHTRAIL"
+Disp "","","","","    LIGHTRAIL"
 (B+1)→B
 int((Y*1.1)→Y
 int((L*1.06)→L
