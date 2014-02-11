@@ -30,7 +30,7 @@ ClrHome
 Disp "MUCH MONEY AS","POSSIBLE IN A 1","MONTH PERIOD.","WATCH-OUT FOR","THE POLICE IF","YOU DEAL TOO","HEAVILY!"
 Pause 
 ClrHome
-Disp "PRICES FOR DRUGS","ARE:","COCAINE:","15000-28000","HEROINE:","5000-12000","ACID: 1000-4200"
+Disp "PRICES FOR DRUGS","ARE:","COKE:","15000-28000","HEROIN:","5000-12000","ACID: 1000-4200"
 Pause 
 Disp "WEED: 300-720","SPEED: 70-220","LUDES: 10-50"
 Pause 
@@ -68,7 +68,7 @@ End
 If D=3
 Then
 ClrHome
-Disp "PIGS ARE SELLING","CHEAP HEROINE","FROM LAST WEEK'S","RAID!!!!"
+Disp "PIGS ARE SELLING","CHEAP HEROIN","FROM LAST WEEK'S","RAID!!!!"
 Pause 
 rand→H
 (850+(H*1150))→H
@@ -77,7 +77,7 @@ End
 If D=4 or D=5
 Then
 ClrHome
-Disp "ADDICTS ARE","BUYING HEROINE","AT OUTRAGEOUS","PRICES!!!"
+Disp "ADDICTS ARE","BUYING HEROIN","AT OUTRAGEOUS","PRICES!!!"
 Pause 
 rand→H
 (18000+(H*25000))→H
@@ -185,12 +185,12 @@ Disp "            ACID"
 End
 If X=4
 Then
-Disp "         HEROINE"
+Disp "         HEROIN"
 (N+F)→N
 End
 If X=5
 Then
-Disp "         COCAINE"
+Disp "         COKE"
 (M+F)→M
 End
 Disp "ON A DEAD DUDE","ON THE","LIGHTRAIL!!!"
@@ -342,8 +342,8 @@ Menu("DRUGWAR!","SEE PRICES",1,"TRENCHCOAT",2,"BUY",3,"SELL",4,"JET",5,"SEE LOAN
 Lbl 1
 ClrHome
 Disp C,H,A,W,S,L,Z
-Output(1,1,"COCAINE")
-Output(2,1,"HEROINE")
+Output(1,1,"COKE")
+Output(2,1,"HEROIN")
 Output(3,1,"ACID")
 Output(4,1,"WEED")
 Output(5,1,"SPEED")
@@ -354,8 +354,8 @@ Goto A
 Lbl 2
 ClrHome
 Disp M,N,O,P,Q,R,K
-Output(1,1,"COCAINE")
-Output(2,1,"HEROINE")
+Output(1,1,"COKE")
+Output(2,1,"HEROIN")
 Output(3,1,"ACID")
 Output(4,1,"WEED")
 Output(5,1,"SPEED")
@@ -454,7 +454,7 @@ Lbl 6
 If N=1
 Then
 ClrHome
-Disp "THE LOAN SHARK","ONLY DEALS IN","16TH STREET."
+Disp "THE LOAN SHARK","ONLY DEALS AT","16TH STREET."
 Pause 
 Goto A
 End
@@ -489,7 +489,7 @@ Lbl 7
 If N=1
 Then
 ClrHome
-Disp "THE BANK IS IN","16TH STREET."
+Disp "THE BANK IS AT","16TH STREET."
 Pause 
 Goto A
 End
