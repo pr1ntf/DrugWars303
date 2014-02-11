@@ -3,7 +3,7 @@ ClrHome
 Disp "  DrugWars303","    Based on","    Drugwars","  VERSION 1.0","","  JUST SAY NO."
 2000→Z
 5000→Y
-0→V
+0→L
 100→K
 1→B
 2→N
@@ -32,10 +32,10 @@ Pause
 ClrHome
 Disp "PRICES FOR DRUGS","ARE:","COKE:","15000-28000","HEROIN:","5000-12000","ACID: 1000-4200"
 Pause 
-Disp "WEED: 300-720","SPEED: 70-220","LUDES: 10-50"
+Disp "WEED: 300-720","SPEED: 70-220","VICODIN: 10-50"
 Pause 
 ClrHome
-Disp "GENERALY, TYPE","THE FIRST LETTER","OF WHAT YOU WANT","TO DO, I.E.:","W=WEED, L=LUDES","ETC..."
+Disp "GENERALY, TYPE","THE FIRST LETTER","OF WHAT YOU WANT","TO DO, I.E.:","W=WEED, A=ACID","ETC..."
 Pause 
 Disp "BUT, 1=YES AND","2=NO"
 Pause 
@@ -49,14 +49,14 @@ round(rand*7000+5000,0)→H
 round(rand*34+10,0)*100→A
 round(rand*42+33,0)*10→W
 round(rand*15+7,0)*10→S
-round(rand*4+1,0)*10→L
+round(rand*4+1,0)*10→V
 round(rand*20,0)→D
 If D=1
 Then
 ClrHome
-Disp "RIVAL DEALERS","ARE SELLING","CHEAP LUDES!!!"
+Disp "RIVAL DEALERS","ARE SELLING","CHEAP VICODIN!!!"
 Pause 
-2→L
+2→V
 End
 If D=2
 Then
@@ -165,7 +165,7 @@ Disp "YOU FOUND:",F,"UNITS OF:"
 int((rand*5)→X
 If X=0
 Then
-Disp "           LUDES"
+Disp "         VICODIN"
 (R+F)→R
 End
 If X=1
@@ -341,13 +341,13 @@ ClrHome
 Menu("DRUGWAR!","SEE PRICES",1,"TRENCHCOAT",2,"BUY",3,"SELL",4,"JET",5,"SEE LOAN SHARK",6,"VISIT BANK",7)
 Lbl 1
 ClrHome
-Disp C,H,A,W,S,L,Z
+Disp C,H,A,W,S,V,Z
 Output(1,1,"COKE")
 Output(2,1,"HEROIN")
 Output(3,1,"ACID")
 Output(4,1,"WEED")
 Output(5,1,"SPEED")
-Output(6,1,"LUDES")
+Output(6,1,"VICODIN")
 Output(7,1,"WALLET")
 Pause 
 Goto A
@@ -359,7 +359,7 @@ Output(2,1,"HEROIN")
 Output(3,1,"ACID")
 Output(4,1,"WEED")
 Output(5,1,"SPEED")
-Output(6,1,"LUDES")
+Output(6,1,"VICODIN")
 Output(7,1,"FREE SPACE")
 Pause 
 Goto A
@@ -367,7 +367,7 @@ Lbl 3
 ClrHome
 Disp "DAY NUMBER:",B
 Input "WHAT TO BUY?",F
-If F≠C and F≠H and F≠A and F≠W and F≠S and F≠L
+If F≠C and F≠H and F≠A and F≠W and F≠S and F≠V
 Goto 3
 int((Z/F)→E
 Disp "HOW MUCH?","YOU CAN AFFORD:",E,"YOU CAN HOLD:",K
@@ -385,7 +385,7 @@ If F=W
 (P+G)→P
 If F=S
 (Q+G)→Q
-If F=L
+If F=V
 (R+G)→R
 (T-M-N-O-P-Q-R)→K
 Goto A
@@ -393,7 +393,7 @@ Lbl 4
 ClrHome
 Disp "DAY NUMBER:",B
 Input "WHAT TO SELL?",F
-If F≠C and F≠H and F≠A and F≠W and F≠S and F≠L
+If F≠C and F≠H and F≠A and F≠W and F≠S and F≠V
 Goto 4
 If F=C
 M→E
@@ -405,7 +405,7 @@ If F=W
 P→E
 If F=S
 Q→E
-If F=L
+If F=V
 R→E
 Disp "HOW MUCH?","YOU HAVE:",E
 Input G
@@ -421,7 +421,7 @@ If F=W
 (P-G)→P
 If F=S
 (Q-G)→Q
-If F=L
+If F=V
 (R-G)→R
 (Z+FG)→Z
 (T-M-N-O-P-Q-R)→K
@@ -446,7 +446,7 @@ ClrHome
 Disp "","","","","  LIGHTRAIL"
 (B+1)→B
 int((Y*1.1)→Y
-int((V*1.06)→V
+int((L*1.06)→L
 If B=31
 Goto C
 Goto θ
@@ -496,7 +496,7 @@ End
 Menu("      BANK      ","VIEW ACCOUNT",D,"DEPOSIT",E,"WITHDRAW",F,"GOODBYE",A)
 Lbl D
 ClrHome
-Disp "YOUR ACCOUNT=",V
+Disp "YOUR ACCOUNT=",L
 Pause 
 Goto 7
 Lbl E
@@ -505,35 +505,35 @@ Disp "HOW MUCH TO","DEPOSIT?","YOU HAVE:",Z
 Input G
 If G&gt;Z or G&lt;0
 Goto E
-(V+G)→V
+(L+G)→L
 (Z-G)→Z
 Goto 7
 Lbl F
 ClrHome
-Disp "HOW MUCH TO","WITHDRAW?","ACCOUNT=",V
+Disp "HOW MUCH TO","WITHDRAW?","ACCOUNT=",L
 Input X
-If X&gt;V or X&lt;0
+If X&gt;L or X&lt;0
 Goto F
-(V-X)→V
+(L-X)→L
 (Z+X)→Z
 Goto 7
 Lbl C
 ClrHome
 Disp "   GAME OVER!"
-(V+Z-Y)→V
-If V&lt;0
+(L+Z-Y)→L
+If L&lt;0
 Then
-0→V
+0→L
 Else
-(√(V/31.5)→V
-If V&gt;100
-100→V
+(√(L/31.5)→L
+If L&gt;100
+100→L
 End
-round(V,0)→V
-Disp "YOUR SCORE (ON A","SCALE OF 1 TO","100)=",V,""
+round(L,0)→L
+Disp "YOUR SCORE (ON A","SCALE OF 1 TO","100)=",L,""
 Pause 
-Input "PLAY AGAIN?",V
-If V=1
+Input "PLAY AGAIN?",L
+If L=1
 Goto G
 ClrHome
 Disp "   THANKS FOR","    PLAYING!"
